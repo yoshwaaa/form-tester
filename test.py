@@ -21,7 +21,7 @@ from get_phone import get_phone
 from db import db_connect
 
 def get_links(static_pages):
-    sitemaps = ['https://www.mesotheliomaguide.com/doctors-sitemap.xml', 'https://www.mesotheliomaguide.com/cancer-centers-sitemap.xml', 'https://www.mesotheliomaguide.com/post-sitemap.xml', 'https://www.mesotheliomaguide.com/page-sitemap.xml']
+    sitemaps = ['first-sitemap.xml', 'second-sitemap.xml', 'third-sitemap.xml', 'fourth-sitemap.xml']
 
     sitemap_links = []
     raw_list = []
