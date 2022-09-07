@@ -1,48 +1,4 @@
-#!/usr/bin/env python3
-
-"""
-crontab:
-0 * * * *
-cd /home/alex/mg-form-test-v1.1/;
-./form-test.py > new_errors 2>&1;
-./supervisor.py
-"""
-import time
-import os
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import ElementNotVisibleException
-from selenium.common.exceptions import InvalidElementStateException
-import string
-from random import randint
-from random import shuffle
-import random
-import requests
-from time import strftime
-import sys
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from pyvirtualdisplay import Display
-
-from pagesMG import static_pages
-from db import db_connect
-
-
-def fillout_form(driver):
-    try:
-        name = driver.find_element_by_name("full_name")
-        name.send_keys('Automated Form Test')
-    except(NoSuchElementException, ElementNotVisibleException):
-        pass
-
-    try:
-        email = driver.find_element_by_name("email_address")
-        email.send_keys("this-is-your-hourly-form-test@gmail.com")
-    except(NoSuchElementException):
+#!/usr/bin/env 
         pass
 
     try:
